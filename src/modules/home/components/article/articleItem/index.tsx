@@ -1,6 +1,6 @@
 import { Typography } from "antd";
 import DeleteButton from "../../../../../components/deleteButton";
-import { ArticleType } from "../../companyList/models";
+import { ArticleType } from "../../company/companyList/models";
 
 export type ArticleItemType = {
   isLoading: boolean
