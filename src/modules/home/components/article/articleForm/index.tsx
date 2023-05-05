@@ -1,7 +1,6 @@
 import { ArticleType } from "../../company/companyList/models";
 import ArticleInputForm from "../articleInputForm";
 import ArticleList from "../articleList"
-import { useState } from 'react';
 
 export type ArticleFormType = {
   articles: ArticleType[]
@@ -9,8 +8,6 @@ export type ArticleFormType = {
 }
 
 const ArticleForm = ({ articles }: ArticleFormType) => {
-  const [isLoading, setIsLoading] = useState<boolean>(false)
-
   const handleDelete = () => {
 
   }
@@ -21,8 +18,8 @@ const ArticleForm = ({ articles }: ArticleFormType) => {
 
   return (
     <>
-      <ArticleList isLoading={isLoading} articles={articles} onDelete={handleDelete} />
-      <ArticleInputForm isLoading={isLoading} onAddNewArticle={handleAddNewArticle} />
+      <ArticleList isLoading={false} articles={articles} onDelete={handleDelete} />
+      <ArticleInputForm isLoading={false} onAddNewArticle={handleAddNewArticle} />
     </>
   )
 }

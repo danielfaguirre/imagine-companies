@@ -1,5 +1,5 @@
+import { ArticleType } from "../../company/companyList/models";
 import ArticleItem from "../articleItem"
-import { ArticleType } from "../companyList/models"
 
 export type ArticleListType = {
   isLoading: boolean
