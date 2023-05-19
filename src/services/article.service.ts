@@ -5,10 +5,6 @@ import { EndpointsEnum } from "./models";
 
 const url = `${SERVER_ROUTE}/${EndpointsEnum.ARTICLE}`;
 
-/* const getAllArticles = () => {
-  return http.getData(url)
-} */
-
 const addArticle = (article: ArticleType, companyNIT: string) => {
   const payLoad: ArticleType = { ...article, companyNIT }
   return http.postData<ArticleType, ArticleType>(url, payLoad)
@@ -23,7 +19,6 @@ const deleteArticle = (articleId: string) => {
 }
 
 const ArticleService = {
-  /*  getAllArticles, */
   addArticle,
   updateArticle,
   deleteArticle
